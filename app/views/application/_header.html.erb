@@ -1,7 +1,7 @@
 <!-- Logo -->
 <div id="logo">
     <h1><a href="#">Ecommerce-app</a></h1>
-    <span>by HTML5 UP</span>
+    <span> <%= 'Olá ' + current_user.name if user_signed_in? %></span>
 </div>
 
 <!-- Nav -->
@@ -44,10 +44,14 @@
 </div>
 <div class="5u 12u(medium)">
     <ul>
-        <li><%= link_to('Fazer Login', new_user_session_path, class: 'button big icon fa-arrow-circle-right') %></li>
 
-        <% if true  %>
+
+
+        <% if user_signed_in? %>
+            <li><%= link_to('Fazer Logoff', destroy_user_session_path, :method => :delete, class: 'button big icon fa-arrow-circle-right') %></li>
+        <% else %>
             <li><%= link_to('Criar Conta', new_user_registration_path, class: 'button alt big icon fa-question-circle') %></li>
+            <li><%= link_to('Fazer Login', new_user_session_path, class: 'button big icon fa-arrow-circle-right') %></li>
         <% end %>
     </ul>
 </div>

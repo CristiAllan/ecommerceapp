@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'devise'
+gem "administrate"
+gem "administrate-field-image"
 
 
 group :development, :test do
@@ -27,6 +29,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  #gem 'simplecov'
 end
 
 group :production do
