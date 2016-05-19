@@ -12,6 +12,10 @@ Rails.application.routes.draw do
    root 'products#index'
    resources :products, only: [:show]
 
+   resources :products do
+  post :search, on: :collection, as: :search
+end
+
    #resources :user, only: [:new, :create, :show]
 
   # Example of regular route:

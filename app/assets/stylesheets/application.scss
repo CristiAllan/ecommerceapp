@@ -194,7 +194,7 @@
     textarea {
     -webkit-appearance: none;
     display: block;
-    width: 100%;
+    width: 30%;
     border-radius: 8px;
     border: solid 1px #eee;
 
@@ -1296,4 +1296,10 @@
 
 .form-actions {
     margin-top: 5px;
+}
+
+.search-form {
+    width: 500px;
+    float: left;
+    margin-left: 300px;
 }

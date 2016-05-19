@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 before_save :set_default_role
 
 def set_default_role
-  #self.role = 'support'
+  self.role = 'support'
 end
 
 end

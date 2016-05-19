@@ -1,10 +1,8 @@
 FactoryGirl.define do
   factory :product do
-    name "MyString"
-    description "MyString"
-    slug "MyString"
-    category nil
-    price "MyString"
-    maker "MyString"
+    name {Faker::Name.name}
+    description {Faker::Name.title}
+    price {Faker::Commerce.price}
+    maker {Faker::Name.title}
   end
 end

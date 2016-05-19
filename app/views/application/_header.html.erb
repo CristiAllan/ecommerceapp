@@ -44,9 +44,6 @@
 </div>
 <div class="5u 12u(medium)">
     <ul>
-
-
-
         <% if user_signed_in? %>
             <li><%= link_to('Fazer Logoff', destroy_user_session_path, :method => :delete, class: 'button big icon fa-arrow-circle-right') %></li>
         <% else %>
@@ -58,3 +55,14 @@
 </div>
 </div>
 </div>
+    <center>
+        <%= form_for(search_products_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], class: 'search-form', placeholder: "Buscar Produtos" %>
+        <%= submit_tag "Buscar" %>
+        <% end %>
+        <% if @products.present? %>
+            <%= render @products %>
+        <% else %>
+            <p>Não existem itens relativos à busca: <%= params[:search] %>.</p>
+        <% end %>
+    </center>

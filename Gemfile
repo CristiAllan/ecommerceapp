@@ -17,18 +17,24 @@ gem "administrate-field-image"
 
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
-  gem 'sqlite3'
+gem 'byebug'
+gem 'sqlite3'
+
+  # test suite
   gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'simplecov', require: false
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
-      gem 'pry-rails'
       gem "letter_opener"
 end
 
 group :test do
-  gem 'shoulda-matchers'
   #gem 'simplecov'
 end
 
